@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.coded">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+            android:usesCleartextTraffic="true"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"
+                 android:roundIcon="@mipmap/ic_launcher_round"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+        <activity android:name=".Activities.Landing">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.LogRegActivity"/>
+        <activity android:name=".Activities.TasteMakeActivity"/>
+        <activity android:name=".Activities.Taste.CategoryChooser"/>
+        <activity android:name=".Activities.Taste.VoteActivity"/>
+        <activity android:name=".Activities.YoutubeLiveStream"/>
+        <activity android:name=".Activities.ProfileActivity"/>
+        <activity android:name=".Activities.MakeActivity"/>
+    </application>
+</manifest>

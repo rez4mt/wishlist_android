@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.FloatingActionButton
+            android:layout_gravity="bottom|end"
+            android:id="@+id/newbtn"
+            android:layout_width="wrap_content"
+            android:src="@drawable/plus"
+            android:visibility="invisible"
+            android:layout_margin="25dp"
+            android:layout_height="wrap_content"/>
+    <android.support.design.widget.FloatingActionButton
+            android:layout_gravity="bottom|start"
+            android:id="@+id/logoutbtn"
+            android:visibility="invisible"
+            android:src="@drawable/logout"
+            android:layout_width="wrap_content"
+            android:layout_margin="25dp"
+
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+        <LinearLayout android:gravity="center"
+                      android:layout_marginTop="20dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <!--Two circles .. two tvs in the middle-->
+
+            <LinearLayout android:gravity="center" android:layout_marginEnd="30dp" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout
+                        android:background="@drawable/circredfillbtn"
+                        android:layout_width="50dp" android:layout_height="50dp">
+                    <TextView android:id="@+id/points"
+                              android:textColor="#fff"
+                              android:textSize="22sp"
+                              android:layout_centerInParent="true" android:text="324" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <TextView android:textSize="22sp" android:textColor="#000" android:text="POINTS" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical"
+                          android:gravity="center"
+                          android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="Hello" android:textColor="#f00" android:textSize="18sp"  android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Name" android:id="@+id/name"  android:textColor="#000" android:textSize="30sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_marginStart="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:background="@drawable/circredfillbtn" android:layout_width="50dp" android:layout_height="50dp">
+                    <TextView android:textSize="22sp" android:textColor="#fff" android:id="@+id/rank" android:layout_centerInParent="true" android:text="3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <TextView android:textColor="#000" android:textStyle="bold" android:textSize="22sp" android:text="Rank" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:layout_marginStart="10dp"
+                  android:textSize="22sp"
+                  android:layout_marginTop="30dp"
+                  android:textStyle="bold"
+                  android:textColor="#000"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Videos"/>
+        <android.support.v7.widget.RecyclerView
+                android:paddingBottom="10dp"
+
+                android:layout_marginTop="10dp"
+                android:id="@+id/recyclerview"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:clipToPadding="false"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center_horizontal"
+              android:layout_height="match_parent">
+    <TextView
+            android:text="Make a"
+            android:textColor="#f00"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:text="Taste"
+              android:textColor="#000"
+              android:textSize="30sp"
+              android:textStyle="bold"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <TextView
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_marginTop="50dp"
+            android:text="YouTube Url" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText
+            android:textColor="#000"
+            android:hint="https://" android:id="@+id/url" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginTop="50dp"
+            android:text="Choose Category" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Spinner android:layout_marginTop="8dp" android:id="@+id/spinner" android:layout_width="match_parent" android:layout_height="wrap_content"></Spinner>
+
+    <Button
+            android:textColor="#fff"
+            android:background="@drawable/redfillbtn"
+            android:id="@+id/submit" android:layout_marginTop="50dp" android:text="Submit" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

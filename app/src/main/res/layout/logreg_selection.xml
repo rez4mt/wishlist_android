@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_marginTop="20dp" android:gravity="center" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+        <Button android:background="@drawable/redfillbtn" android:textColor="#fff" android:id="@+id/forlogin" android:text="Login" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <Button android:layout_marginStart="10dp" android:background="@drawable/redfillbtn" android:textColor="#fff" android:paddingStart="5dp" android:paddingEnd="5dp" android:id="@+id/forregister" android:text="Create Account" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+</LinearLayout>
