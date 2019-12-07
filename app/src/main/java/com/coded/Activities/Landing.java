@@ -22,7 +22,7 @@ public class Landing extends AppCompatActivity {
                 if(User.from(getBaseContext()).loggedIn())
                 {
                     //
-                    startActivity(new Intent(getBaseContext() , TasteMakeActivity.class));
+                    startActivity(new Intent(getBaseContext() , ProfileActivity.class));
                     finish();
                 }else{
                     startActivity(new Intent(getBaseContext() , LogRegActivity.class));

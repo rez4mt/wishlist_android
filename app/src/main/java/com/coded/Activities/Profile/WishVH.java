@@ -6,24 +6,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.coded.R;
 
-public class VideoCell extends RecyclerView.ViewHolder {
-    TextView title , category ;
-    ImageView img ;
-    public VideoCell(View v, View.OnClickListener l)
+public class WishVH extends RecyclerView.ViewHolder {
+    ImageView img;
+    TextView title;
+    public WishVH(View v , View.OnClickListener l ,View.OnLongClickListener l2)
     {
+
         super(v);
-        title  = v.findViewById(R.id.title);
-        category = v.findViewById(R.id.category);
         img = v.findViewById(R.id.image);
+        title = v.findViewById(R.id.title);
         v.setOnClickListener(l);
+        v.setOnLongClickListener(l2);
     }
     public void setTitle(String title)
     {
         this.title.setText(title);
     }
-    public void setCategory(String cat)
-    {
-        this.category.setText(cat);
-    }
-
 }

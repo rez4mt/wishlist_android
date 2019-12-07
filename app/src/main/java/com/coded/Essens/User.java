@@ -88,6 +88,15 @@ public class User extends ContextWrapper {
         }
         return "";
     }
+    public String getUniqueId()
+    {
+        try {
+            return data.getString("unique_id");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
     public boolean loggedIn()
     {
         return preferences.getBoolean("logged_in",false);

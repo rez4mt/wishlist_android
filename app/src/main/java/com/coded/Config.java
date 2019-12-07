@@ -1,7 +1,13 @@
 package com.coded;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -11,7 +17,7 @@ import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 public class Config {
-    public static String base = "http://192.168.8.147/s/tastebuds/";
+    public static String base = "http://192.168.8.100/s/wishlist/";
     public static String TAG = "RR";
 
     public static String U(String path , String... params)
@@ -53,5 +59,18 @@ public class Config {
         });
 
     }
+    public static boolean askPerms(Activity ac)
+    {
+        if (ContextCompat.checkSelfPermission(ac.getBaseContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(ac.getBaseContext() , Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(ac,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    1);
+            // Permission is not granted
+            return false;
+        }
+        return true;
+    }
+
 
 }

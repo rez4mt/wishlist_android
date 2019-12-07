@@ -8,13 +8,11 @@ android:layout_width="match_parent"
             android:id="@+id/newbtn"
             android:layout_width="wrap_content"
             android:src="@drawable/plus"
-            android:visibility="invisible"
             android:layout_margin="25dp"
             android:layout_height="wrap_content"/>
     <android.support.design.widget.FloatingActionButton
             android:layout_gravity="bottom|start"
             android:id="@+id/logoutbtn"
-            android:visibility="invisible"
             android:src="@drawable/logout"
             android:layout_width="wrap_content"
             android:layout_margin="25dp"
@@ -29,17 +27,7 @@ android:layout_width="match_parent"
                       android:layout_marginTop="20dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
             <!--Two circles .. two tvs in the middle-->
 
-            <LinearLayout android:gravity="center" android:layout_marginEnd="30dp" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <RelativeLayout
-                        android:background="@drawable/circredfillbtn"
-                        android:layout_width="50dp" android:layout_height="50dp">
-                    <TextView android:id="@+id/points"
-                              android:textColor="#fff"
-                              android:textSize="22sp"
-                              android:layout_centerInParent="true" android:text="324" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                </RelativeLayout>
-                <TextView android:textSize="22sp" android:textColor="#000" android:text="POINTS" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            </LinearLayout>
+
 
             <LinearLayout android:orientation="vertical"
                           android:gravity="center"
@@ -48,29 +36,23 @@ android:layout_width="match_parent"
                 <TextView android:text="Name" android:id="@+id/name"  android:textColor="#000" android:textSize="30sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>
 
-            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_marginStart="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <RelativeLayout android:background="@drawable/circredfillbtn" android:layout_width="50dp" android:layout_height="50dp">
-                    <TextView android:textSize="22sp" android:textColor="#fff" android:id="@+id/rank" android:layout_centerInParent="true" android:text="3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                </RelativeLayout>
-                <TextView android:textColor="#000" android:textStyle="bold" android:textSize="22sp" android:text="Rank" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            </LinearLayout>
+
         </LinearLayout>
         <TextView android:layout_marginStart="10dp"
                   android:textSize="22sp"
                   android:layout_marginTop="30dp"
                   android:textStyle="bold"
                   android:textColor="#000"
-                  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Videos"/>
+                  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wish list"/>
         <android.support.v7.widget.RecyclerView
-                android:paddingBottom="10dp"
-
+                android:paddingBottom="130dp"
                 android:layout_marginTop="10dp"
                 android:id="@+id/recyclerview"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>

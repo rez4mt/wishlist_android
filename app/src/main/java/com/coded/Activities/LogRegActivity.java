@@ -92,7 +92,7 @@ public class LogRegActivity extends AppCompatActivity {
                         //registered .. save info and go to another page
                         Log.w(TAG, "onSuccess: "+resp.getAll() );
                         User.from(getBaseContext()).save((JSONObject)resp.getPayload());
-                        startActivity(new Intent(getBaseContext() , TasteMakeActivity.class));
+                        startActivity(new Intent(getBaseContext() , ProfileActivity.class));
                         finish();
                     }
 
@@ -142,7 +142,7 @@ public class LogRegActivity extends AppCompatActivity {
                         //registered .. save info and go to another page
                         User.from(getBaseContext()).save((JSONObject) resp.getPayload());
                         Log.w(TAG, "onSuccess: "+resp.getAll() );
-                        startActivity(new Intent(getBaseContext() , TasteMakeActivity.class));
+                        startActivity(new Intent(getBaseContext() , ProfileActivity.class));
                         finish();
                     }
 

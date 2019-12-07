@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.coded">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
             android:usesCleartextTraffic="true"
                  android:label="@string/app_name"
@@ -15,11 +17,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.LogRegActivity"/>
-        <activity android:name=".Activities.TasteMakeActivity"/>
-        <activity android:name=".Activities.Taste.CategoryChooser"/>
-        <activity android:name=".Activities.Taste.VoteActivity"/>
-        <activity android:name=".Activities.YoutubeLiveStream"/>
         <activity android:name=".Activities.ProfileActivity"/>
-        <activity android:name=".Activities.MakeActivity"/>
+        <activity android:name=".Activities.WishMaker"/>
+        <activity android:name=".Activities.WishDetails"/>
+        <activity android:name=".Activities.LinkHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+
+                <data
+                        android:host="192.168.8.100"
+                        android:pathPrefix="/s/wishlist/share"
+                        android:scheme="http"></data>
+                <data
+                        android:host="192.168.8.100"
+                        android:path="/s/wishlist/share"
+                        android:scheme="https"></data>
+            </intent-filter>
+        </activity>
+
     </application>
 </manifest>

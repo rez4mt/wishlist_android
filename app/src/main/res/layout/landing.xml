@@ -5,5 +5,5 @@
               android:gravity="center"
               android:layout_height="match_parent">
     <TextView android:text="Welcome to" android:textSize="25sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <ImageView android:src="@drawable/tb2" android:layout_width="wrap_content" android:layout_height="200dp"/>
+    <TextView android:text="WISH LIST APP" android:textSize="25sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 </LinearLayout>
